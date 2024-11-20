@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <header>
@@ -19,8 +19,8 @@
     <div id="menu" class="hidden">
         <h2>Menu</h2>
         <ul id="button-list" class="button-list">
-            <a href="login.html">
-                <button onclick="window.location.href='#'">Login</button>
+            <a href="index.html">
+                <button onclick="window.location.href='#'">Home</button>
             </a>
             <button onclick="window.location.href='#'">Vendas</button>
             <button onclick="window.location.href='#'">Aluguel</button>
@@ -83,55 +83,25 @@
         </form>
     </aside>
 
-    <main>
-        <section id="products">
-            <button class="product-card" onclick="redirectToProduct(1)">
-                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
-                <h4>Casa Moderna</h4>
-                <p>R$ 750.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(2)">
-                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
-                <h4>Apartamento Luxuoso</h4>
-                <p>R$ 1.200.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(3)">
-                <img src="https://via.placeholder.com/150" alt="Casa Simples">
-                <h4>Casa Simples</h4>
-                <p>R$ 350.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(4)">
-                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
-                <h4>Casa Moderna</h4>
-                <p>R$ 750.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(5)">
-                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
-                <h4>Apartamento Luxuoso</h4>
-                <p>R$ 1.200.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(6)">
-                <img src="https://via.placeholder.com/150" alt="Casa Simples">
-                <h4>Casa Simples</h4>
-                <p>R$ 350.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(7)">
-                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
-                <h4>Casa Moderna</h4>
-                <p>R$ 750.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(8)">
-                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
-                <h4>Apartamento Luxuoso</h4>
-                <p>R$ 1.200.000</p>
-            </button>
-            <button class="product-card" onclick="redirectToProduct(9)">
-                <img src="https://via.placeholder.com/150" alt="Casa Simples">
-                <h4>Casa Simples</h4>
-                <p>R$ 350.000</p>
-            </button>
-        </section>
-    </main>
+
+        <div class="login-container">
+            <h1>ENTRAR</h1>
+            <form>
+                <div class="input-group">
+                    <label for="username"><h3>Usuario:</h3></label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password"><h3>Senha:</h3></label>
+                    <input type="password" id="password" name="password" required>
+               
+                <div class="botao-login">
+                    <button type="submit" class="button">Entrar</button>
+                </div>
+            </form>
+           
+                <p>Não tem uma conta? <a href="/cadastro.html">Cadastre-se</a></p>
+            </div>
+        </div>
+
 
     <script src="/js/script.js"></script>
 </body>

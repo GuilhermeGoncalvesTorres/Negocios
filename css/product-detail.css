@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-    background-color: #007bff;
+    background-color: #6d3960;
     color: white;
     padding: 10px;
     display: flex;
@@ -62,7 +62,7 @@ header {
 
 .product-info .price {
     font-size: 22px;
-    color: #007bff;
+    color: #6d3960;
     margin-bottom: 15px;
 }
 
@@ -73,7 +73,7 @@ header {
 }
 
 #contact-btn {
-    background-color: #007bff;
+    background-color: #6d3960;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -83,5 +83,4 @@ header {
 }
 
 #contact-btn:hover {
-    background-color: #0056b3;
-}
+    background-color: #6d3960;}

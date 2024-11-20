@@ -146,53 +146,31 @@ button {
     display: block;
 }
 
-main {
-    flex-grow: 1;
-    padding: 20px;
-    margin-top: 60px;
-}
-
-#products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.product-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    color: inherit;
+.login-container{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    width: 30%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #ce93bf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     align-items: center;
-    justify-content: center;
+}
+ 
+.login-container input{
+    margin: auto;
+    width: 30vh;
+    height: 3vh ;
+    
 }
 
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.botao-login{
+    padding: 20px;
 }
-
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-button.product-card {
-    border: none;
-    outline: none;
-    background: none;
-    padding: 0;
-}
-
 
 #search-container {
     display: flex;
