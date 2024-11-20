@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="/css/product-detail.css">
+</head>
+<body>
+    <header>
+        <button id="back-btn">← Voltar</button>
+    </header>
+
+    <main>
+        <section id="product-details">
+            <div class="product-image">
+                <img src="" alt="Imagem do Produto">
+            </div>
+            <div class="product-info">
+                <h1>Título do Produto</h1>
+                <p class="price">Preço do Produto</p>
+                <p class="description">Descrição do Produto</p>
+                <button id="contact-btn">Entrar em Contato</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Dados dos produtos simulados
+        const products = {
+            1: {
+                title: "Casa Moderna",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 750.000",
+                description: "Uma casa moderna localizada em um bairro tranquilo, com 3 quartos, 2 banheiros e uma ampla sala de estar."
+            },
+            2: {
+                title: "Apartamento Luxuoso",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 1.200.000",
+                description: "Apartamento de luxo com vista para o mar, 4 quartos e 3 banheiros."
+            },
+            3: {
+                title: "Casa Simples",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 350.000",
+                description: "Uma casa acessível com 2 quartos e 1 banheiro."
+            },
+            4: {
+                title: "Casa Moderna",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 750.000",
+                description: "Uma casa moderna localizada em um bairro tranquilo, com 3 quartos, 2 banheiros e uma ampla sala de estar."
+            },
+            5: {
+                title: "Apartamento Luxuoso",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 1.200.000",
+                description: "Apartamento de luxo com vista para o mar, 4 quartos e 3 banheiros."
+            },
+            6: {
+                title: "Casa Simples",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 350.000",
+                description: "Uma casa acessível com 2 quartos e 1 banheiro."
+            },
+            7: {
+                title: "Casa Moderna",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 750.000",
+                description: "Uma casa moderna localizada em um bairro tranquilo, com 3 quartos, 2 banheiros e uma ampla sala de estar."
+            },
+            8: {
+                title: "Apartamento Luxuoso",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 1.200.000",
+                description: "Apartamento de luxo com vista para o mar, 4 quartos e 3 banheiros."
+            },
+            9: {
+                title: "Casa Simples",
+                image: "https://via.placeholder.com/400",
+                price: "R$ 350.000",
+                description: "Uma casa acessível com 2 quartos e 1 banheiro."
+            }
+        };
+
+        // Captura o ID do produto da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Exibe os detalhes do produto correspondente
+        if (productId && products[productId]) {
+            const product = products[productId];
+            document.querySelector('h1').innerText = product.title;
+            document.querySelector('.product-image img').src = product.image;
+            document.querySelector('.product-image img').alt = product.title;
+            document.querySelector('.price').innerText = product.price;
+            document.querySelector('.description').innerText = product.description;
+        } else {
+            document.querySelector('main').innerHTML = '<p>Produto não encontrado.</p>';
+        }
+
+        // Botão "Voltar"
+        const backBtn = document.getElementById('back-btn');
+        backBtn.addEventListener('click', () => {
+            window.history.back();
+        });
+
+        // Botão "Entrar em Contato"
+        const contactBtn = document.getElementById('contact-btn');
+        contactBtn.addEventListener('click', () => {
+            alert('Entraremos em contato com você em breve!');
+        });
+    </script>
+</body>
+</html>

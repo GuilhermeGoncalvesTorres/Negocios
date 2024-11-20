@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <button id="menu-btn">☰ Menu</button>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Buscar casas ou apartamentos...">
+            <button id="search-btn">🔍</button>
+        </div>
+        <button id="filters-btn">Filtros</button>
+    </header>
+    
+    <div id="menu" class="hidden">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Vendas</a></li>
+            <li><a href="#">Aluguel</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </div>
+
+
+    <aside id="filters" class="hidden">
+        <h2>Filtros</h2>
+        <form>
+            <label>
+                <h3>Tipo:</h3>
+                <input type="radio" name="tipo-imovel" value="casa">Casa
+                <input type="radio" name="tipo-imovel" value="apartamento">Apartamento
+
+            <label>
+                <h3>Preço maximo:</h3>
+                <input type="text" id="valor" name="valor" oninput="formatarMoeda(event)" placeholder="Digite o valor">
+                <label>
+                    <h3>Dormitorios:</h3>
+                    <input type="number" placeholder="Ex.: 4">
+            <label>
+                <h3>Localização:</h3>
+                <select id="estado" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <label>
+                    <h3>Contrato:</h3>
+                    <input type="radio" name="tipo-imovel" value="casa">Compra
+                    <input type="radio" name="tipo-imovel" value="apartamento">Aluguel
+            </label>
+            <button id="aplicarbtn" type="submit">Aplicar</button>
+        </form>
+    </aside>
+
+    <main>
+        <section id="products">
+            <button class="product-card" onclick="redirectToProduct(1)">
+                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
+                <h4>Casa Moderna</h4>
+                <p>R$ 750.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(2)">
+                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
+                <h4>Apartamento Luxuoso</h4>
+                <p>R$ 1.200.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(3)">
+                <img src="https://via.placeholder.com/150" alt="Casa Simples">
+                <h4>Casa Simples</h4>
+                <p>R$ 350.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(4)">
+                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
+                <h4>Casa Moderna</h4>
+                <p>R$ 750.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(5)">
+                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
+                <h4>Apartamento Luxuoso</h4>
+                <p>R$ 1.200.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(6)">
+                <img src="https://via.placeholder.com/150" alt="Casa Simples">
+                <h4>Casa Simples</h4>
+                <p>R$ 350.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(7)">
+                <img src="https://via.placeholder.com/150" alt="Casa Moderna">
+                <h4>Casa Moderna</h4>
+                <p>R$ 750.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(8)">
+                <img src="https://via.placeholder.com/150" alt="Apartamento Luxuoso">
+                <h4>Apartamento Luxuoso</h4>
+                <p>R$ 1.200.000</p>
+            </button>
+            <button class="product-card" onclick="redirectToProduct(9)">
+                <img src="https://via.placeholder.com/150" alt="Casa Simples">
+                <h4>Casa Simples</h4>
+                <p>R$ 350.000</p>
+            </button>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
